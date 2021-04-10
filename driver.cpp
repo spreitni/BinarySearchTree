@@ -1,16 +1,21 @@
 #include <iostream>
-#include "binarySearchTree.hpp"
+#include "BinaryTree.hpp"
+
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    binarySearchTree* d1 = new binarySearchTree(4);
-    binarySearchTree* d2 = new binarySearchTree(0);
-    binarySearchTree* d3 = new binarySearchTree(2);
-    binarySearchTree* d4 = new binarySearchTree(8);
-    binarySearchTree* d5 = new binarySearchTree(6);
-    binarySearchTree* d6 = new binarySearchTree(7);
-    Root* root = new Root(1);
-    //binarySearchTree->display();
+    BinaryTree* bt = new BinaryTree();
+    bt->add(5);
+    bt->add(2);
+    bt->add(13);
+    bt->add(17);
+    bt->add(1);
+    cout << bt->getCount() << endl;
+    bt->visitInOrder();
+    cout<<"\n";
+    bt->visitPostOrder();
+    cout<<"\n";
+    bt->visitPreOrder();
     return 0;
 }
